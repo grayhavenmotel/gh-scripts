@@ -1,0 +1,23 @@
+REFERNCE for ADB COMMANDS
+https://developer.android.com/studio/command-line/adb
+
+// connect
+$ adb connect 192.168.1.55
+
+// list devices connected to
+$ adb devices
+
+// kill server
+$ adb kill-server
+
+// send a command to a specific device
+$ adb -s 192.168.1.55:5555 reboot
+
+// send a shell command to remote device
+$ adb -s 192.168.1.55:5555 shell shell_command
+
+// sign out of netflix (locally after $ adb -s 192.168.1.55:5555 shell )
+$ pm clear com.netflix.ninja
+
+// sign out of netflix (remote
+$ adb -s 192.168.1.55:5555 shell pm clear com.netflix.ninja

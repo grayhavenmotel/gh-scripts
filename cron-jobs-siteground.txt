@@ -1,0 +1,8 @@
+//load webpage with WGET
+*/15 * * * * wget -O - https://example.com/index.php >/dev/null 2>&1
+
+//load webpage with CURL
+*/15 * * * * curl --request GET 'https://example.com/'
+
+//load local every 15 minutes
+*/15 * * * * /usr/bin/php -q /home/cpanel_username/public_html/index.php
